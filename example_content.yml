@@ -1,8 +1,8 @@
 task: create
-host: "http://islandora.traefik.me/"
+host: "https://islandora.traefik.me/"
 username: admin
 nopassword
-input_dir: demo_content_files
+input_dir: /workbench/islandora_workbench_demo_content/demo_content_files
 input_csv: demo_content.csv
 allow_missing_files: true
 allow_adding_terms: true

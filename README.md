@@ -20,17 +20,6 @@ Overview of the steps to use this content:
 1. __(Optional)__ Check the config `docker run -it --rm --network="host" -v $(pwd):/workbench --name my-running-workbench workbench-docker bash -lc "cd /workbench ; python setup.py install ; ./workbench --config /workbench/islandora_workbench_demo_content/example_content.yml --check"`
 1. To create content start the container process `docker run -it --rm --network="host" -v $(pwd):/workbench --name my-running-workbench workbench-docker bash -lc "cd /workbench ; python setup.py install ; ./workbench --config /workbench/islandora_workbench_demo_content/example_content.yml"`
 
-## TL;DR
-```shell
-git clone https://github.com/mjordan/islandora_workbench
-cd islandora_workbench
-git clone https://github.com/DonRichards/islandora_workbench_demo_content
-sed -i.bak "s/^nopassword.*/password\: $(cat ../secrets/live/DRUPAL_DEFAULT_ACCOUNT_PASSWORD) /g" islandora_workbench_demo_content/example_content.yml
-sed -i.bak "s|^input_dir.*|input_dir\: /workbench/islandora_workbench_demo_content/demo_content_files|g" islandora_workbench_demo_content/example_content.yml
-docker build -t workbench-docker .
-docker run -it --rm --network="host" -v $(pwd):/workbench --name my-running-workbench workbench-docker bash -lc "cd /workbench ; python setup.py install ; ./workbench --config /workbench/islandora_workbench_demo_content/example_content.yml"
-```
-
 ### Notes:
 
 In the config file, the `input_dir` is set to `/workbench/islandora_workbench_demo_content/demo_content_files` because that is the absolute path to the directory when the container is running.  If you are running the workbench on your local machine, you will need to change the `input_dir` to the absolute path to the directory on your local machine.
@@ -56,6 +45,17 @@ docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:de
 # Remove all files
 docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete file" 
 
+```
+
+### TL;DR
+```shell
+git clone https://github.com/mjordan/islandora_workbench
+cd islandora_workbench
+git clone https://github.com/DonRichards/islandora_workbench_demo_content
+sed -i.bak "s/^nopassword.*/password\: $(cat ../secrets/live/DRUPAL_DEFAULT_ACCOUNT_PASSWORD) /g" islandora_workbench_demo_content/example_content.yml
+sed -i.bak "s|^input_dir.*|input_dir\: /workbench/islandora_workbench_demo_content/demo_content_files|g" islandora_workbench_demo_content/example_content.yml
+docker build -t workbench-docker .
+docker run -it --rm --network="host" -v $(pwd):/workbench --name my-running-workbench workbench-docker bash -lc "cd /workbench ; python setup.py install ; ./workbench --config /workbench/islandora_workbench_demo_content/example_content.yml"
 ```
 
 ## TO DO

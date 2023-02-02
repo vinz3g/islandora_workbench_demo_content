@@ -25,7 +25,7 @@ Overview of the steps to use this content:
 git clone https://github.com/mjordan/islandora_workbench
 cd islandora_workbench
 git clone https://github.com/DonRichards/islandora_workbench_demo_content
-sed -i.bak "s/^nopassword.*/password\: $(cat ../secrets/live/DRUPAL_DEFAULT_ACCOUNT_PASSWORD | echo password) /g" islandora_workbench_demo_content/example_content.yml
+sed -i.bak "s/^nopassword.*/password\: $(cat ../secrets/live/DRUPAL_DEFAULT_ACCOUNT_PASSWORD) /g" islandora_workbench_demo_content/example_content.yml
 sed -i.bak "s|^input_dir.*|input_dir\: /workbench/islandora_workbench_demo_content/demo_content_files|g" islandora_workbench_demo_content/example_content.yml
 docker build -t workbench-docker .
 docker run -it --rm --network="host" -v $(pwd):/workbench --name my-running-workbench workbench-docker bash -lc "cd /workbench ; python setup.py install ; ./workbench --config /workbench/islandora_workbench_demo_content/example_content.yml"

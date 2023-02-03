@@ -40,10 +40,10 @@ docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:de
 # This will remove all media and files from the site
 
 # Remove all media
-docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete media" 
+docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete media"
 
 # Remove all files
-docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete file" 
+docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete file"
 
 ```
 
@@ -64,4 +64,5 @@ docker run -it --rm --network="host" -v $(pwd):/workbench --name my-running-work
 
 ## TO DO
 - [ ] Add setup.py install to Dockerfile
+- [X] Make Alternative rollback option
 - [ ] Fix rollback functionality

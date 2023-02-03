@@ -47,6 +47,10 @@ docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:de
 
 ```
 
+A more cautious solution would be to remove the content in the reverse order that it was created.  This would be a little more complicated to implement, but would be safer.
+Here's a script that will do that but should be used with caution and not on a production site.
+[Github Gist: rollback_workaround.sh](https://gist.github.com/DonRichards/f23d9240fcf40cbe8005df093b4acaa2#file-rollback_workaround-sh)
+
 ### TL;DR
 ```shell
 git clone https://github.com/mjordan/islandora_workbench

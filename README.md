@@ -30,20 +30,20 @@ In the config file, the `input_dir` is set to `/workbench/islandora_workbench_de
 
 
 #### Workaround
-If you want to rollback the content, you will need to manually delete the content from Drupal.  The content is created in the following order:
-
+If you want to rollback the content, you will need to manually delete the content from Drupal.  The content should be removed in the following order:
+Files -> Media -> Nodes
 ```shell
-# Remove all nodes
-docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete node $(tail -n +2 islandora_workbench_demo_content/demo_content_files/rollback.csv | sed 'H;1h;$!d;x;y/\n/,/')"
-
 # !!!!! WARNING !!!!!
-# This will remove all media and files from the site
+# This will remove ALL media and files from the site
+
+# Remove all files
+docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete file"
 
 # Remove all media
 docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete media"
 
-# Remove all files
-docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete file"
+# Remove all nodes
+docker-compose -f ../docker-compose.yml exec -T drupal bash -lc "drush entity:delete node $(tail -n +2 islandora_workbench_demo_content/demo_content_files/rollback.csv | sed 'H;1h;$!d;x;y/\n/,/')"
 
 ```
 

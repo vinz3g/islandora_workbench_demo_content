@@ -1,10 +1,14 @@
 task: create
 host: "https://islandora.traefik.me/"
 username: admin
-password: password 
+password: password
 input_dir: /workbench/islandora_workbench_demo_content/demo_content_files
 input_csv: jhu_root_collections.csv
 allow_missing_files: true
 allow_adding_terms: true
 media_use: "'Thumbnail Image'|'Original File'"
 log_json: true
+content_type: collection_object
+list_missing_drupal_fields: true
+timestamp_rollback: true
+clean_csv_values_skip: ["smart_quotes", "outside_spaces"]

@@ -1,6 +1,6 @@
 title,id,parent_id,field_weight,field_identifier,field_resource_type,field_genre,field_linked_agent,field_model,field_edtf_date_created,field_edtf_date_issued,field_place_published,field_description,field_rights,field_subject,field_member_of,field_language,file
 Libros Arquitectura,50,,,COLL-0001,collection,collection,,Collection,,,,,Derechos Reservados,,,,
-Psicologia del color,51,50,,book,collection,journal article,relators:cre:corporate_body:Royal Society of London|relators:pbl:corporate_body:Royal Society of London,Paged Content,2000,,,,Editorial Gustavo Gili,subject:tides,,,
+Psicologia del color,51,50,,book,collection,journal article,relators:cre:corporate_body:HUB|relators:pbl:corporate_body:HUB,Paged Content,2000,,,,Editorial Gustavo Gili,subject:tides,,,
 ARQ0024665-0001,52,51,1,page 1,text,journal article,,Page,,,,,,,,,ARQ0024665-0001.jpg
 ARQ0024665-0002,53,51,2,page 2,text,journal article,,Page,,,,,,,,,ARQ0024665-0002.jpg
 ARQ0024665-0003,54,51,3,page 3,text,journal article,,Page,,,,,,,,,ARQ0024665-0003.jpg

@@ -1,6 +1,6 @@
 title,id,parent_id,field_weight,field_identifier,field_resource_type,field_genre,field_linked_agent,field_model,field_edtf_date_created,field_edtf_date_issued,field_place_published,field_description,field_rights,field_subject,field_member_of,field_language,file
 Libros Arquitectura,1,,,COLL-0001,collection,collection,,Collection,,,,,Derechos Reservados,,,,
-Psicologia del color,2,1,,book,collection,book,relators:cre:corporate_body:HUB|relators:pbl:corporate_body:HUB,Collection,2000,,,,Editorial Gustavo Gili,subject:tides,,,
+Psicologia del color,2,1,,book,collection,book,relators:cre:corporate_body:HUB|relators:pbl:corporate_body:HUB,Paged Content,2000,,,,Editorial Gustavo Gili,subject:tides,,,
 ARQ0024665-0001,3,2,1,page 1,text,book,,Page,,,,,,,,,ARQ0024665-0001.jpg
 ARQ0024665-0002,4,2,2,page 2,text,book,,Page,,,,,,,,,ARQ0024665-0002.jpg
 ARQ0024665-0003,5,2,3,page 3,text,book,,Page,,,,,,,,,ARQ0024665-0003.jpg
@@ -353,7 +353,7 @@ ARQ0024665-0349,351,2,349,page 349,text,book,,Page,,,,,,,,,ARQ0024665-0349.jpg
 ARQ0024665-0350,352,2,350,page 350,text,book,,Page,,,,,,,,,ARQ0024665-0350.jpg
 ARQ0024665-0351,353,2,351,page 351,text,book,,Page,,,,,,,,,ARQ0024665-0351.jpg
 ARQ0024665-0352,354,2,352,page 352,text,book,,Page,,,,,,,,,ARQ0024665-0352.jpg
-Centro Social y de Capacitacion,355,1,,book,collection,collection,relators:cre:corporate_body:HUB|relators:pbl:corporate_body:HUB,Collection,1989,,,,UADY,subject:Yucatan,,,
+Centro Social y de Capacitacion,355,1,,book,collection,collection,relators:cre:corporate_body:HUB|relators:pbl:corporate_body:HUB,Paged Content,1989,,,,UADY,subject:Yucatan,,,
 ARQT0000010-0001,356,355,1,page 1,text,book,,Page,,,,,,,,,ARQT0000010-0001.JPG
 ARQT0000010-0002,357,355,2,page 2,text,book,,Page,,,,,,,,,ARQT0000010-0002.JPG
 ARQT0000010-0003,358,355,3,page 3,text,book,,Page,,,,,,,,,ARQT0000010-0003.JPG
